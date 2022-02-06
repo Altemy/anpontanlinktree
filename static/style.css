@@ -1,0 +1,12 @@
+.site-header{
+    margin-right: auto;
+    margin-left: auto;
+    background: white;
+    font-size: 30px;
+    display: flex;
+    padding: 60px 20px;
+    /* position: fixed; */
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 10px solid #ccc;
+}
