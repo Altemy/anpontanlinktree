@@ -3,7 +3,6 @@ package main
 import (
 	"html/template"
 	"net/http"
-	"os"
 )
 
 func mainHandler(w http.ResponseWriter, r *http.Request) {
@@ -31,7 +30,7 @@ func main() {
 	http.HandleFunc("/podcast/", podcastHandler)
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static/"))))
 	http.Handle("/img/", http.StripPrefix("/img/", http.FileServer(http.Dir("img/"))))
-	port := os.Getenv("PORT")
-	http.ListenAndServe(":"+port, nil)
-	// http.ListenAndServe(":8080", nil)
+	// port := os.Getenv("PORT")
+	// http.ListenAndServe(":"+port, nil)
+	http.ListenAndServe(":8080", nil)
 }
